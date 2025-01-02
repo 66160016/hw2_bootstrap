@@ -1,26 +1,23 @@
-/* Reset some basic styles */
+/* เริ่มต้นที่ Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Body styles */
+/* Body */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f4f9f4;
+    color: #333;
     line-height: 1.6;
-    background-color: #f0f4f1; /* สีพื้นหลังอ่อนๆ เขียวอ่อน */
-    color: #4a4a4a; /* สีข้อความเข้ม */
 }
 
-/* Header Section */
+/* Header */
 header {
-    background-color: #6b8e23; /* สีเขียวตุ่นๆ (Olive Drab) */
-}
-
-header h1 {
-    font-size: 36px;
+    background-color: #2a4d3f; /* เขียวตุ่น */
     color: white;
+    padding: 20px 0;
 }
 
 header .container {
@@ -32,97 +29,146 @@ header .container {
 header img {
     width: 50px;
     height: 50px;
+    margin-right: 10px;
 }
 
-/* Search Bar Styles */
-input[type="text"] {
-    width: 250px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #8fbc8f; /* สีเขียวอ่อนๆ */
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
 }
 
-button {
-    background-color: #6b8e23; /* ใช้สีเขียวเดียวกับ Header */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #556b2f; /* สีเขียวเข้มขึ้น */
-}
-
-/* Navigation Menu */
+/* Navigation */
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    gap: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* สีทองอ่อนๆ เมื่อ hover */
+    color: #a4c9a8; /* เขียวอ่อน */
 }
 
-/* Main Image */
-img.img-fluid {
-    width: 100%;
+/* Main content */
+main {
+    padding: 40px 0;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #2a4d3f; /* เขียวตุ่น */
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.img-fluid {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* Search Bar */
+.input-group {
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.input-group input {
+    border-radius: 25px 0 0 25px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 80%;
+    font-size: 1rem;
+}
+
+.input-group button {
+    border-radius: 0 25px 25px 0;
+    background-color: #2a4d3f; /* เขียวตุ่น */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #4f776b; /* เขียวเข้ม */
+}
+
+/* Highlight Section */
+.container .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.container .col-md-6 {
+    max-width: 600px;
+    text-align: center;
+}
+
+.container .col-md-6 img {
+    max-width: 100%;
     border-radius: 10px;
-}
-
-/* Highlights Section */
-h3 {
-    font-size: 24px;
-    color: #6b8e23; /* สีเขียวตุ่นๆ */
-    margin-bottom: 20px;
-}
-
-h4 {
-    font-size: 20px;
-    color: #6b8e23; /* สีเขียวตุ่นๆ */
-    margin-top: 10px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #4a4a4a;
 }
 
 /* Footer */
 footer {
-    background-color: #6b8e23; /* สีเขียวตุ่นๆ */
+    background-color: #2a4d3f; /* เขียวตุ่น */
     color: white;
-    padding: 10px 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 footer p {
-    font-size: 14px;
-    text-align: center;
+    margin: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        margin-top: 10px;
     }
 
-    .container {
-        padding: 10px;
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .input-group input {
+        width: 70%;
+    }
+
+    .input-group button {
+        width: 30%;
     }
 }

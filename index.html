@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถานที่ท่องเที่ยวในจังหวัดจันทบุรี</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="bg-primary text-white py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <img src="/image/logo.webp" alt="Logo" class="me-3" style="width: 50px; height: 50px;">
+                <h1 class="mb-0" style="font-family: 'Pacifico', cursive;">Chanthaburi</h1>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="container mt-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+                    <button class="btn btn-primary" onclick="performSearch()">Search</button>
+                </div>
+            </div>
+
+            <script>
+                function performSearch() {
+                    const query = document.getElementById('searchInput').value;
+                    if (query) {
+                        alert(`Searching for: ${query}`);
+                    } else {
+                        alert('Please enter a search query.');
+                    }
+                }
+            </script>
+
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Image -->
+    <div class="container my-4">
+        <img src="/image/5 สถานที่ท่องเที่ยว จันทบุรี.png" alt="Main" class="img-fluid rounded">
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="container">
+        <div class="text-center">
+            <h2 class="text-primary">สัมผัสมนต์เสน่ห์แห่งจันทบุรี</h2>
+            <p class="lead">
+                จันทบุรี เป็นจังหวัดที่ตั้งอยู่ทางภาคตะวันออกของประเทศไทย โดดเด่นด้วยธรรมชาติที่งดงาม 
+                ประวัติศาสตร์ที่ลึกซึ้ง และวัฒนธรรมที่หลากหลาย ถ้าคุณกำลังมองหาจุดหมายปลายทางที่มีทั้งทะเล 
+                ภูเขา น้ำตก และวิถีชีวิตชาวบ้านที่เรียบง่าย จันทบุรีคือคำตอบของคุณ
+            </p>
+        </div>
+    </div>
+
+    <!-- Highlights Section -->
+    <div class="container my-4">
+        <h3 class="text-center text-primary">สถานที่แนะนำ</h3>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <img src="/image/highlight.png" alt="Highlight" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-primary">โบสถ์วัดแม่พระปฏิสนธินิรมล</h4>
+                <p>
+                    ความงามแห่งศรัทธาในสถาปัตยกรรมโกธิก โบสถ์วัดแม่พระปฏิสนธินิรมล หรือที่ชาวบ้านมักเรียกกันว่า 
+                    "โบสถ์คริสต์จันทบุรี" เป็นสถานที่ท่องเที่ยวสำคัญที่ไม่ควรพลาดเมื่อมาเยือนจังหวัดจันทบุรี 
+                    โบสถ์แห่งนี้ไม่เพียงแต่เป็นศาสนสถานที่เก่าแก่และสำคัญของชุมชนคาทอลิกในไทย 
+                    แต่ยังมีความงดงามในด้านสถาปัตยกรรมที่สะกดสายตาผู้มาเยือน
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy;2024 66160016 Kotchanan Sirisakhon</p>
+    </footer>
+
+</body>
+</html>
